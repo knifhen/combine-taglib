@@ -9,5 +9,6 @@ run:
   args:
   - -exc
   - |
+    cd source-code
     mvn --version
     mvn clean package

@@ -1,0 +1,13 @@
+resources:
+  - name: source-code
+    type: git
+    source:
+      uri: https://github.com/knifhen/combine-taglib
+      branch: concourse-test
+
+jobs:
+  - name: build
+    plan:
+      - get: source-code
+      - task: build
+        file: source-code/tasks/build.yml
